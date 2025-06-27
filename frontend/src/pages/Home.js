@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { handleError, handleSuccess } from '/media/bunty/Bunty/bunty/Auth-mern-app/frontend//src/utils';
+import { handleError, handleSuccess } from '../utils';
 import { ToastContainer } from 'react-toastify';
 
 function Home() {
-    const [loggedInUser, setLoggedInUser] = useState('');
+    const [loggedInUser, setLoggedInUser] = useState([]);
     const [products, setProducts] = useState('');
     const navigate = useNavigate();
     useEffect(() => {
@@ -46,7 +46,7 @@ function Home() {
             <button onClick={handleLogout}>Logout</button>
             <div>
                 {
-                    products && products?.map((item, index) => (
+                        Array.isArray(products) && products?.map((item, index) => (
                         <ul key={index}>
                             <span>{item.name} : {item.price}</span>
                         </ul>

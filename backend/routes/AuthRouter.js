@@ -1,6 +1,6 @@
 const router = require("express").Router()
 const { signup,login } = require("../Controllers/AuthController");
-const {SignupValidation,LoginValidation} = require("/media/bunty/Bunty/bunty/Auth-mern-app/backend/Middleware/AuthValidation")
+const {SignupValidation,LoginValidation} = require("../Middleware/AuthValidation")
 
 
 router.post("/signup", SignupValidation,signup),

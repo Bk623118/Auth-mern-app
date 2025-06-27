@@ -1,4 +1,4 @@
-const UserModel = require("/media/bunty/Bunty/bunty/Auth-mern-app/backend/Models/user")
+const UserModel = require("../Models/user")
 const jwt= require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 

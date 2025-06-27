@@ -2,8 +2,8 @@ const express = require("express");
 const app = express(); 
 const bodyParser =require("body-parser");
 const cors = require("cors");
-const AuthRouter = require("/media/bunty/Bunty/bunty/Auth-mern-app/backend/routes/AuthRouter")
-const ProductRouter = require ("/media/bunty/Bunty/bunty/Auth-mern-app/backend/routes/ProductRouter")
+const AuthRouter = require("../backend/routes/AuthRouter")
+const ProductRouter = require ("../backend/routes/ProductRouter")
 
 require("dotenv").config();
 require("./Models/db")
